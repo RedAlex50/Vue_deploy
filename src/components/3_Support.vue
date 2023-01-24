@@ -147,23 +147,6 @@ export default {
     height: 750px;
 }
 
-@media (max-width: 1200px) {   
-    .table-4x2{
-        width: 100%;
-    }
-
-    .table-item{
-        width: 80%;
-        margin: 4px auto;
-        height: fit-content;
-    }
-
-    #block2{
-        height: 2800px;
-    }
-}
-
-
 .header{
     width: 400px;
     margin: 5rem auto;
@@ -222,5 +205,45 @@ export default {
     font-size: 20px;
     z-index: 10;
 }
+
+@media (max-width: 1200px) {   
+    #block2{
+        margin-bottom: 0;
+        height: 2150px;
+    }
+    .header{
+        display: block;
+        position: static;
+        text-align: center;
+        font-size: 28px;
+        width: fit-content;
+        margin:auto;
+        padding: 10%;
+    }
+
+    .table-item{
+        width: 95vw;
+        height: 25vh;
+        position: relative;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        margin-right: 5vw;
+        margin-bottom: 5px;
+        padding-bottom: 40px;
+    }
+
+    .item-logo{
+        z-index: 10;
+        position: absolute;
+        top: 70%;
+        left: 80%;
+        transform: scale(0.7);
+    }
+
+    .item-text{
+        font-size: 13px;
+    }
+}
+
 
 </style>

@@ -85,6 +85,9 @@ export default {
 .desktop-flex {
         display: flex;
     }
+    .team{
+        width: 1200px;
+    }
 }
 
 .header{
@@ -97,7 +100,6 @@ export default {
 }
 
 .team{
-    width: 1200px;
     margin: 0 auto;
 }
 
@@ -142,5 +144,12 @@ export default {
     background-color: #111111;
 }
 
+@media (max-width: 700px) {
+    .team-member{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
 
 </style>

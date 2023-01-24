@@ -26,34 +26,38 @@ export default {
 }
 </script>
 <style scoped>
-
-.flex{
-    display: flex;
+@media (min-width: 1200px) {
+    #block5{
+        
+    width: 1200px;
+    }
+    
 }
-#block5 .text-bold{
+
+.text-bold{
     font-family: Montserrat-Bold;
     font-size:30px;
 }
 
 #block5{
-    width: 1200px;
-    margin: 0 auto;
     padding: 75px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#block5 .flex{
+.flex{
     justify-content: space-between;
     margin-top: 30px;
     margin-left: -50px;
    
 }
 
-#block5 .mx-auto{
-    margin-left: auto;/* переопределение стилей Саши! */
-    margin-right: auto;/* переопределение стилей Саши! */
+.mx-auto{
+    margin-left: 0;/* переопределение стилей Саши! */
+    margin-right: 0;/* переопределение стилей Саши! */
 }
 
-#block5 .spec_alt{
+.spec_alt{
     /* outline: 1px red solid; */
     width: 20%; /* от ширины родителя */
     background-image: url(../img/Vector.png);
@@ -62,68 +66,73 @@ export default {
     padding-left: 50px;
 }
 
-#block5 .spec_alt img{
+.spec_alt img{
     width: 40%;
 }
 
-#block5 .spec-upper{
+.spec-upper{
     font-family: Montserrat-Bold;/* переопределение стилей Саши! */
 }
 
-#block5 .spec-bot{
+.spec-bot{
     font-size: 18px;
 }
+.flex{
+    display: flex;
+}
 
-
-@media (max-width:500px){
-
-    #block5 .text-bold{
-        font-size:28px;
+@media (max-width:500px) {
+    .text-bold {
+        font-size: 28px;
     }
-    
-    #block5{
+
+    #block5 {
         padding: 15px;
+        margin-top: -100px;
     }
-    
-    #block5 .flex{
+    .flex {
         /* justify-content: space-between;
         margin-top: 30px;
         margin-left: -50px; */
-        display: flex;
         flex-direction: column;
-       
+
     }
-    
-    #block5 .mx-auto{
-        margin-left: 0;/* переопределение стилей Саши! */
-        margin-right: 0;/* переопределение стилей Саши! */
+
+    .mx-auto {
+        margin-left: 0;
+        /* переопределение стилей Саши! */
+        margin-right: 0;
+        /* переопределение стилей Саши! */
     }
-    
-    #block5 .spec_alt{
+
+    .spec_alt {
         /* outline: 1px red solid; */
-        width: 35%; /* от ширины родителя */
+        width: 35%;
+        /* от ширины родителя */
         background-image: url(../img/Vector.png);
         background-position: 0 12%;
         background-repeat: no-repeat;
         /* padding-left: 10px; */
-        background-size:45%;
+        background-size: 45%;
         /* margin-left: 2rem; */
         margin-left: 37%;
         margin-top: 20px;
         box-sizing: border-box;
-    
+
     }
-    
-    #block5 .spec_alt img{
+
+    .spec_alt img {
         width: 40%;
         margin: auto;
     }
 
-    #block5 .spec-bot{
+    .spec-bot {
         font-size: 13px;
         margin: 0;
-        padding:0;
+        padding: 0;
         margin-left: -50px;
     }
+
+
 }
 </style>

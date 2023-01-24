@@ -163,8 +163,14 @@ button{
     text-align: center;
 }
 
-.faq {
+@media (min-width: 1200px) {
+    .faq{
     width: 1200px;
+    }
+    
+}
+
+.faq {
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
@@ -197,6 +203,10 @@ button{
 
 .question-header {
     font-family: Montserrat-Bold;
+}
+
+.question:hover{
+    cursor: pointer;
 }
 
 .question-text {

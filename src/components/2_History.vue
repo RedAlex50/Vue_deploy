@@ -54,8 +54,6 @@ export default {
 }
 </script>
 <style scoped>
-
-
 .header{
     width: 600px;
     font-size: 38px;
@@ -63,15 +61,25 @@ export default {
     font-weight: bold;
 }
 
-h3 {
-    font-weight: normal;
-}
-
 .main{
     width: 1200px;
-    margin: 50px auto;
-}
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 110px;
+    padding-left: 120px;
+    /* width: 100vw; */
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    padding-right: 50px;
 
+}
+h2{
+    background-color: white;
+    color:black;
+    font-size: 28px;;
+    margin-bottom: 25px;
+    font-family: Montserrat-Bold; 
+}
 .figures{
     display:flex;
     justify-content: flex-start;
@@ -79,7 +87,7 @@ h3 {
     flex-wrap: wrap; /* разрешить переход на новую строку */
 }
 
-.figures figure{
+figure{
     background-image: url(../img/Vector.png);
     background-position: 10% 8%;
     background-repeat: no-repeat;
@@ -90,15 +98,46 @@ h3 {
     /* outline: 1px solid green; */
 }
 
-.figures figcaption{
+figcaption{
     text-align: left;
     font-size: 18px;
     padding-left: 12px;
     width: 100%;
 }
 
-.figures figure img{
+figure img{
     width: 40%;
+}
+
+
+@media (max-width:500px) {
+    .figures {
+        margin: auto;
+        margin-top: 60px;
+    }
+
+    h2,
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    figure {
+        width: 35%;
+        margin-right: 13%;
+        background-size: 50%;
+    }
+
+    .years13 {
+        width: 100vw;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+
+    h3 {
+        /* outline: 1px solid blue; */
+        font-size: 13px;
+    }
 }
 
 </style>

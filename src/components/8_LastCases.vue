@@ -1,60 +1,44 @@
 <template>
-    <div class="cases _container" id="cases">
-      <div class="header">
-        Последние кейсы
-      </div>
-      <div class="cases__items">
-        <div class="cases__width-380 cases__small-case">
-          <img src="@/img/cases-image1.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-            <p class="date">22.04.2019</p>
-            <p>Эти слова совершенно справедливы, однако гипнотический рифф продолжает паузный пласт.</p>
-          </div>
+    <div class="block7">
+        <div class="last_cases">Последние кейсы</div>
+        <div class="galary1">
+            <figure>
+                <a href="#"><img src="@/img/image_6_2.png">
+                    <figcaption><h3>Настройка кэширования данных. Апгрейд сервера. 
+                        Ускорение работы сайта в 30 раз!</h3>
+                        <h6>04.05.2020</h6>
+                        <h4>Влияние скорости загрузки страниц сайта на отказы и конверсии. Кейс ускорения...</h4>
+                    </figcaption></a>
+            </figure>
+            <figure>
+                <a href="#"><img src="@/img/image_11_1.png">
+                    <figcaption>
+                        <h4 class="using">Использование отчётов Ecommerce в Яндекс.Метрике</h4>
+                    </figcaption></a> 
+            </figure>
         </div>
-        <div class="cases__width-780" style="grid-column: 2/4;">
-          <img src="@/img/cases-image2.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-          </div>
+        <div class="galary2">
+            <figure>
+                <a href="#"><img src="@/img/image_7_3.png">
+                    <figcaption><h3>Повышение конверсий страницы с формой заявки с применением АВ-тестирования</h3>
+                        <h6>24.10.2020</h6>
+                    </figcaption></a>
+            </figure>
+            <figure>
+                <a href="#"><img src="@/img/image_8_3.png">
+                    <figcaption><h3>Drupal 7: ускорение времени генерации страниц интернет-магазина на 32%</h3>
+                        <h6>23.09.2019</h6>
+                    </figcaption></a>
+            </figure>
+            <figure>
+                <a href="#"><img src="@/img/image_9_2.png">
+                    <figcaption><h3 class="change">Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1C: Предприятие, МойСклад, Класс365</h3>
+                        <h6>22.08.2019</h6>
+                        <h4><span>Опубликован </span><a href="#" class="relise">релиз модуля...</a></h4>
+                    </figcaption></a>
+            </figure>
+
         </div>
-        <div class="cases__width-380">
-          <img src="@/img/cases-image3.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-            <p class="date">22.04.2019</p>
-          </div>
-        </div>
-        <div class="cases__width-380">
-          <img src="@/img/cases-image4.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-            <p class="date">22.04.2019</p>
-          </div>
-        </div>
-        <div class="cases__width-380 cases__small-case">
-          <img src="@/img/cases-image5.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-            <p class="date">22.04.2019</p>
-            <p>Эти слова совершенно справедливы, однако гипнотический рифф продолжает паузный пласт.</p>
-          </div>
-        </div>
-        <div class="cases__width-780" style="grid-column: 1/3;">
-          <img src="@/img/cases-image6.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-          </div>
-        </div>
-        <div class="cases__width-380">
-          <img src="@/img/cases-image7.png" alt="">
-          <div class="cases__text">
-            <span>Настройка выгрузки YML для Яндекс.Маркета</span>
-            <p class="date">22.04.2019</p>
-          </div>
-        </div>
-      </div>
-      <button class="cases__more">ПОКАЗАТЬ ЕЩЁ</button>
     </div>
   </template>
   
@@ -64,194 +48,186 @@
   </script>
   
   <style scoped>
-.header{
-    width: 400px;
-    margin: 5rem auto;
-    font-size: 38px;
+
+.block7 .last_cases{
+    font-size: 32px;
     font-family: Montserrat-Bold;
-    font-weight: bold;
     text-align: center;
-}
-  .cases {
-    width: 100%;
-    margin-top: 318px;
-  }
-  
-  .cases__title {
-    font-size: 42px;
-    font-weight: 700;
-    color: #050C33;
-    text-align: center;
-  }
-  
-  .cases__items {
-    width: 1180px;
-    margin: 0 auto;
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-  }
-  
-  .cases__items img {
-    position: absolute;
-    border-radius: 5px;
-    z-index: 1;
-  }
-  
-  .cases__items span {
-    color: white;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: bold;
-    width: 320px;
-  }
-  
-  .cases__text {
-    width: 380px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 4;
-  }
-  
-  .cases__text .date {
-    font-size: 12px;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 5px;
-    opacity: 0.5;
-  }
-  
-  .cases__text p {
-    font-size: 14px;
-    line-height: 22px;
-    color: #050C33;
-    margin-top: 20px;
-    opacity: 0.7;
-  }
-  
-  .cases__width-380 {
-    position: relative;
-    width: 380px;
-    height: 475px;
-    margin-bottom: 20px;
-  }
-  
-  .cases__width-380 .cases__text {
-    padding: 40px 50px;
-  }
-  
-  .cases__width-780 {
-    position: relative;
-    width: 780px;
-    height: 475px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-  }
-  
-  .cases__width-780 .cases__text {
-    padding: 40px;
-  }
-  
-  .cases__small-case .cases__text {
-    padding: 70px 30px;
-  }
-  
-  .cases__small-case .cases__text .date {
-    color: #050C33;
-  }
-  
-  .cases__small-case .cases__text span {
-    color: #050C33;
-  }
-  
-  .cases__more {
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    width: 15rem;
-    height: 3rem;
-    border: 1px solid gray;
-    border-radius: 4px;
-    color: #111111;
-    background-color: white;
-  }
-button:hover{
-    transition: 100ms;
-    color: #ffffff;
-    background-color: #111111;
 }
 
+.block7 h3{
+    font-family: Montserrat-Bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.block7 h6{
+    color: #050C33;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.block7 h4{
+    color: #4E5A73;
+    text-decoration: none;
+}
+
+.block7 .galary1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.block7 .galary1 h3{
+    margin-top: 0;
+    color: black;
+
+}
+
+.block7 .galary1 figure:first-child{/* псевдокласс на первый flex */
+    width: 30%;/* ширина первой figure */
+    margin: 0;
+    /* outline: #040613 1px solid; */
+}
+
+.block7 .galary1 h4{
+    margin-bottom: 0;
+}
+.block7 .galary1 figure:first-child img{
+    width: 100%;
+    object-fit: cover; /* масштабируется картинка в блоке под изменяемый размер */
+}
+/* cover - по ширине */
+/* сcontain - по высоте */
+
+.block7 .galary1 figure:first-child figcaption{
+    padding: 10%;
+}
+
+.block7 .galary1 figure:last-child{/* псевдокласс на второй flex */
+    width: 60%;/* ширина второй figure */
+    margin: 0;
+    margin-left: 2%;
+}
+
+.block7 .galary1 figure:last-child img{
+    width: 100%;
+    object-fit: cover; /* масштабируется картинка в блоке под изменяемый размер */
+}
+
+.block7 .galary1 figure:last-child figcaption h4{
+    margin-top: -85px;
+    color: white !important;
+    margin-left: 5%;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.block7{
+    width: 98vw;
+    /* outline: #f14d34 1px solid; */
+}
+
+.block7 .galary2{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.block7 .galary2 figure{
+    margin: 0;
+    margin-right: 2%;
+    width: 29.5%;
+}
+
+.block7 .galary2 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.block7 .galary2 figure:last-child{
+    margin-right: 0;
+}
+
+.block7 .galary2 figure:first-child figcaption{
+    margin-top: -170px;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.block7 .galary2 figure:nth-child(2) figcaption{
+    margin-top: -170px;
+    color: white;
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.block7 .galary2 figure:first-child figcaption h6{
+    color: rgba(255, 255, 255, 0.548);
+}
+
+.block7 .galary2 figure:nth-child(2) figcaption h6{
+    color: rgba(255, 255, 255, 0.548);
+}
+
+.block7 .galary2 figure:last-child figcaption{
+    padding: 10%;
+}
+
+.block7 .relise{
+    text-decoration: none;
+    color:rgb(59, 143, 195);
+}
+
+.block7 a{
+    text-decoration: none;
+}
+
+.block7 .relise:hover{
+    text-decoration: underline;
+}
+
+.block7 h3:hover{
+    text-decoration: underline;
+}
+
+.block7 .using:hover{
+    text-decoration: underline;
+}
+
+.block7 .change{
+    text-decoration: none;
+    color: black;
+}
+
+.block7 .change:hover{
+    text-decoration: underline;
+}
+
+.block7 span{
+    color: #4E5A73 !important;
+}
+
+@media (max-width: 500px) {
   
-  @media screen and (max-width: 700px) {
-    .cases {
-      margin-top: 1200px;
+  .block7 .galary1 {
+        flex-direction: column;
     }
-  
-    .cases__title {
-      margin-bottom: 30px;
-      font-size: 25px;
+
+    .block7 .galary1>* {
+        width: 95% !important;
     }
-  
-    .cases__items {
-      width: 100%;
-      margin: 0;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+
+    .block7 .galary2 {
+        flex-direction: column;
     }
-  
-    .cases__width-380 {
-      width: 100%;
-      height: 440px;
-      margin-bottom: 0px;
+
+    .block7 .galary2>* {
+        width: 95% !important;
+        margin-bottom: 20px !important;
+        margin-top: 50px !important;
     }
-  
-    .cases__width-380 img {
-      width: 100%;
-    }
-  
-    .cases__text {
-      width: 100%;
-      margin: 0 auto;
-    }
-  
-    .cases__width-380 .cases__text {
-      margin: 20px;
-      padding: 0;
-    }
-  
-    .cases__small-case .cases__text {
-      width: 100%;
-      margin: 0 auto;
-      padding: 0;
-    }
-  
-    .cases__width-780 {
-      width: 100%;
-      height: 440px;
-      margin-bottom: 0px;
-      margin-right: 0px;
-    }
-  
-    .cases__width-780 span {
-      position: absolute;
-      top: -100px;
-      right: 0;
-      padding: 0;
-      color: #fff;
-    }
-  
-    .cases__width-780 img {
-      width: 100%;
-      height: 320px;
-    }
-  }
+
+}
   </style>

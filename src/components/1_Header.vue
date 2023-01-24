@@ -1,50 +1,50 @@
 <template>
-    <div id="video-block">
-        <div id="video-filter"></div>
-        <video class="video-background"
-            src="https://res.cloudinary.com/dpyzh619e/video/upload/v1606770179/video_bjr0b7.mp4" playsinline=""
-            autoplay="autoplay" loop="" preload="auto" muted="">
-        </video>
-        </div>
+<div id="block0">
         <div class="main">
-            <div class="drupal-main">
-                <h1>Поддержка сайтов на Drupal</h1>
-                <p>Сопровождение и поддержка сайтов
-                    на CMS Drupal любых версий и запущенности
-                </p>
-                <div class="main-btn">
-                    <button>
-                        ТАРИФЫ
-                    </button>
+            <div class="desktop-flex">
+                <div class="drupal-main">
+                    <h1>Поддержка сайтов на Drupal</h1>
+                    <p>Сопровождение и поддержка сайтов
+                        на CMS Drupal любых версий и запущенности
+                    </p>
+                    <div class="main-btn">
+                        <button>
+                            ТАРИФЫ
+                        </button>
+                    </div>
+                </div>
+                <div class="main-specs">
+                        <div class="main-spec">
+                            <h1 id="h1">#1 <span><img src="@/img/cup.png" alt=""></span></h1>
+                            <p>Drupal-разработчик в России по версии Рейтинга Рунета</p>
+                        </div>
+                        <div class="main-spec">
+                            <h2>3+</h2>
+                            <p>средний опыт специалистов более 3 лет</p>
+                        </div>
+                        <div class="main-spec">
+                            <h2>14</h2>
+                            <p>лет опыта в сфере Drupal</p>
+                        </div>
+                        <div class="main-spec">
+                            <h2>50+</h2>
+                            <p>модулей и тем в формате DrupalGive</p>
+                        </div>
+                        <div class="main-spec">
+                            <h2>90 000+</h2>
+                            <p>часов поддержки сайтов на Drupal</p>
+                        </div>
+                        <div class="main-spec">
+                            <h2>300+</h2>
+                            <p>Проектов на поддержке</p>
+                        </div>
                 </div>
             </div>
-            <div class="main-specs">
-                    <div class="main-spec">
-                        <h1>#1 <span><img src="@/img/cup.png" alt=""></span></h1>
-                        <p>Drupal-разработчик в России по версии Рейтинга Рунета</p>
-                    </div>
-                    <div class="main-spec">
-                        <h2>3+</h2>
-                        <p>средний опыт специалистов более 3 лет</p>
-                    </div>
-                    <div class="main-spec">
-                        <h2>14</h2>
-                        <p>лет опыта в сфере Drupal</p>
-                    </div>
-                    <div class="main-spec">
-                        <h2>50+</h2>
-                        <p>модулей и тем в формате DrupalGive</p>
-                    </div>
-                    <div class="main-spec">
-                        <h2>90 000+</h2>
-                        <p>часов поддержки сайтов на Drupal</p>
-                    </div>
-                    <div class="main-spec">
-                        <h2>300+</h2>
-                        <p>Проектов на поддержке</p>
-                    </div>
-            </div>
         </div>
+        <video loop muted autoplay id="video">
+            <source src="@\img\header_video.mp4" type="video/mp4">
+        </video>
+    </div>
 </template>
 <script>
 export default {
@@ -52,12 +52,34 @@ export default {
 }
 </script>
 <style scoped>
+@media (min-width: 1200px){
+.desktop-flex {
+        display: flex;
+    }
+}
+#block0{
+    color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: -100;
+}
 
+#h1{
+    margin: 0;
+}
+
+.main{
+    position: absolute;
+    top:20%;
+    left:15%;
+    height: 100%;
+    z-index: 1200;
+}
 
 @media (max-width: 1200px){
     #block0 {
         background-color: #111111;
-        height: 1000px;
+        height: 800px;
     }
     .spec{
         margin: 1rem auto;
@@ -66,34 +88,46 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    #video {
+        display: none;
+}
 }
 
 @media(min-width: 1201px){
+    .main{
+        
+    width: 1200px;
+    }
     .main-specs{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-.main{
-    width: 1200px;
-    margin: 30px auto;
-    color: white;
-    position: relative;
-    display: flex;
-}
-.drupal-main {
-    margin: 2rem auto;
-    width: 400px;
+    
+#video {
+    filter: brightness(30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-.drupal-main h1{
+
+.drupal-main {
+    margin: 2rem auto;
+    font-size:75%;
+}
+
+h1{
     font-family: Montserrat-Bold;
-    font-size: 48px;
+    font-size: 44px;
 }
 
 .main-btn{
     margin: 2rem 0;
     width: fit-content;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .main-btn button{
@@ -103,6 +137,7 @@ export default {
     background-color: transparent;
     border-radius: 4px;
     color: #ffffff;
+    z-index: 2000;
 }
 
 .main-btn button:hover{
@@ -113,7 +148,6 @@ export default {
 
 .main-specs{
     margin: 0 auto;
-    padding: 3rem;
 }
 
 .main-spec{
@@ -124,41 +158,42 @@ export default {
     margin: 10px;
 }
 
-.main-spec img{
+h2{
+    font-family: Montserrat-Bold;
+    margin: 0;
+}
+
+img{
     position: relative;
     top: -6px;
 }
 
-.main-spec p{
+p{
     font-size: 11px;
     opacity: 0.8;
     margin: 0;
 }
 
-#video-block {
-  z-index: -10;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 550px;
-  overflow: hidden;
+@media (min-width: 1200px) {
+    #block0{
+        padding-top:45%;
+    }
+    .main{
+        width: 1300px;
+    }
+    .main-btn{
+        margin-left:0;
+        margin-right:0;
+    }
+    .drupal-main {
+        width: 400px;
+    }
 }
-
-#video-filter {
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#video-block video {
-  min-height: 100%;
-  min-width: 100%;
-  filter: blur(2px);
+@media (min-width: 500px) {
+    .drupal-main{
+        width: 500px;
+        margin: 0;
+    }
 }
 
 </style>

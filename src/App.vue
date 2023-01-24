@@ -1,9 +1,6 @@
 <template>
     <div>
-        <button class="btn-for-form" @click="formAppear">
-            СВЯЗЬ С НАМИ
-        </button>
-        <v-form v-if="formVisible"/>
+        
         <v-navbar></v-navbar>
         <v-header></v-header>
         <history></history>
@@ -17,6 +14,14 @@
         <works></works>
         <faq></faq>
         <v-footer></v-footer>
+        <div class="form">
+            <v-form :isVisible="formVisible"
+                @close="formVisible = false"
+            />
+        </div>
+        <button class="btn-for-form" @click="formAppear">
+            СВЯЗЬ С НАМИ
+        </button>
     </div>
 </template>
 
@@ -71,23 +76,30 @@ export default {
 </script>
 
 <style>
+.form{
+    position: fixed;
+    top: 20%;
+    left: 35%;
+}
 
 .btn-for-form{
     color: white;
-    font-size: larger;
-    position: sticky;
+    position: fixed;
     top: 90%;
     left: 85%;
-    z-index: 1000;
+    z-index: 3000;
     border: 2px solid #f14d34;
     border-radius: 4px;
-    padding: 10px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     background-color: rgba(0, 0, 0, 0.747);
 }
 .btn-for-form:hover{
     color: black;
     background-color: #f14d34;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 @font-face {   

@@ -99,41 +99,40 @@ export default{
         <div class="header">
             Отзывы
         </div>
-        
-            <div
-                v-for="review in reviews" :key="review.id"
+        <div
+            v-for="review in reviews" :key="review.id"
+        >
+            <transition
+                name="fade"
             >
-                <transition
-                    name="fade"
-                >
-                    <div v-if="review.s" class="reviews flex">
-                        <div class="review-main" >
-                            <img src="@/img/logo_0.png" :alt=review.img>
-                            <p class="review-text">
-                                {{ review.text }}
-                            </p>
-                            <p class="review-author">
-                                {{ review.author }}
-                                <a :href="review.link"> {{ review.link }} </a>
-                            </p>
-                        </div>
-                        <div class="review-number">
-                            <div class="arrows flex">
-                                <button id="reviews-prev" @click="prev_review">
-                                </button>
-                                <div class="review-counter">
-                                    <span id="reviews-scroller">
-                                        0{{ review.id }}
-                                    </span>
-                                    / 08
-                                </div>
-                                <button id="reviews-next" @click="next_review">
-                                </button>
+                <div v-if="review.s" class="reviews flex">
+                    <div class="review-main" >
+                        <img src="@/img/logo_0.png" :alt=review.img>
+                        <p class="review-text">
+                            {{ review.text }}
+                        </p>
+                        <p class="review-author">
+                            {{ review.author }}
+                            <a :href="review.link"> {{ review.link }} </a>
+                        </p>
+                    </div>
+                    <div class="review-number">
+                        <div class="arrows flex">
+                            <button id="reviews-prev" @click="prev_review">
+                            </button>
+                            <div class="review-counter">
+                                <span id="reviews-scroller">
+                                    0{{ review.id }}
+                                </span>
+                                / 08
                             </div>
+                            <button id="reviews-next" @click="next_review">
+                            </button>
                         </div>
                     </div>
-                </transition>
-            </div>
+                </div>
+            </transition>
+        </div>
     </div>
     
 </template>
@@ -141,13 +140,38 @@ export default{
 <style scoped>
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s ease;
-  }
-  
-  .fade-enter-from, .fade-leave-to {
+}
+
+.fade-enter-from, .fade-leave-to {
     position: fixed;
     opacity: 0;
-  }
+}
 
+.flex {
+    display: flex;
+}
+
+@media (min-width: 1200px){
+    .desktop-flex {
+            display: flex;
+        }
+}
+
+@media (min-width:960px) {
+    .reviews {
+        width: 960px;
+    }
+
+}
+.reviews {
+    margin: 0 auto;
+    box-shadow: 0px 0px 200px #8b8b8b5e;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+}
 
 
 .header{
@@ -158,48 +182,41 @@ export default{
     font-weight: bold;
     text-align: center;
 }
-
-.reviews{
-    width: 960px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 200px #8b8b8b5e;
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 5px;
-    padding: 2rem;
-    padding-right: 0;
-    margin-bottom: 2rem;
+#block8 {
+    padding-bottom:5rem;
 }
 
-.review-main{
-    transition: 500ms;
-    width: 64%;
-    padding: 14px 60px;
-    border-right: 1px solid #cdcdcd;
+
+.review-main {
+    padding: 14px 30px;
+    overflow:hidden;
+    margin-right:20px;
+    border-bottom: 1px solid #cdcdcd;
     font-size: 14px;
 }
 
-.review-text{
+.review-text {
     font-family: Montserrat-Bold;
 }
 
-.review-author{
-    color:gray;
+.review-author {
+    color: gray;
 }
 
-.review-author a{
-    color:black;
+.review-author a {
+    color: black;
 }
 
-.review-number{
-    width: 36%;
+.review-number {
     display: flex;
 }
 
-.arrows{
+.arrows {
     margin: auto;
+    padding: 10px;
 }
 
-.arrows button{
+button {
     width: 16px;
     height: 32px;
     border: none;
@@ -210,23 +227,44 @@ export default{
     margin: 0 46px;
     vertical-align: middle;
     color: gray;
+
 }
 
 #reviews-scroller {
     color: black;
 }
 
-#reviews-prev{
+#reviews-prev {
     background: url(../img/arrow-left.svg) no-repeat center;
     background-size: contain;
 }
 
-#reviews-next{
+#reviews-next {
     background: url(../img/arrow-right.svg) no-repeat center;
     background-size: contain;
 }
-
 .flex{
     display: flex;
+}
+
+
+@media (min-width: 800px) {
+    .reviews {
+        flex-direction: row;
+    }
+    .reviews{
+    padding: 4rem;
+    }
+    .review-main {
+        padding: 14px 60px;
+        border-bottom: 0;
+        border-right: 1px solid #cdcdcd;
+        width: 62%;
+    }
+
+    .review-number {
+        width: 38%;
+    }
+    
 }
 </style>
